@@ -31,10 +31,21 @@ class OrderViewModel: ViewModel() {
     }
   }
   val priceStr: LiveData<String> = Transformations.map(_price) {
-    NumberFormat.getCurrencyInstance().format(it ?: 0.0)
+    if(it == null) null
+    else NumberFormat.getCurrencyInstance().format(it)
   }
 
   init {
+    init()
+  }
+
+  fun init() {
+    quantity.value = null
+    flavor.value = null
+    pickupDate.value = null
+    _price.value = null
+    cupcakePrice = 0.0
+    shippingPrice = 0.0
     setPickupOptions()
   }
 

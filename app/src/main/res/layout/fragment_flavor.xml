@@ -112,6 +112,20 @@
                 android:onClick="@{() -> xmlFragment.goToNextScreen()}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cancel_button"
+                app:layout_constraintTop_toBottomOf="@id/subtotal" />
+
+            <Button
+                style="?attr/materialButtonOutlinedStyle"
+                android:id="@+id/cancel_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/side_margin"
+                android:text="@string/cancel"
+                android:layout_marginEnd="@dimen/margin_between_elements"
+                android:onClick="@{() -> xmlFragment.cancelOrder()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/next_button"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/subtotal" />
 

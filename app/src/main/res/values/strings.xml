@@ -19,7 +19,11 @@
     <string name="one_cupcake">One Cupcake</string>
     <string name="six_cupcakes">Six Cupcakes</string>
     <string name="twelve_cupcakes">Twelve Cupcakes</string>
-    <string name="cupcake_count">%d Cupcakes</string>
+    <plurals name="cupcake_count">
+        <item quantity="one">%d cupcake</item>
+        <item quantity="zero">No cupcakes</item>
+        <item quantity="other">%d cupcakes</item>
+    </plurals>
     <string name="choose_flavor">Choose Flavor</string>
     <string name="vanilla">Vanilla</string>
     <string name="chocolate">Chocolate</string>
@@ -38,6 +42,6 @@
     <string name="subtotal_price">Subtotal %s</string>
     <string name="total_price">Total %s</string>
     <string name="new_cupcake_order">New Cupcake Order</string>
-    <string name="order_details">Quantity: %1$s cupcakes \n Flavor: %2$s \nPickup date: %3$s \n
+    <string name="order_details">Quantity: %1$s \n Flavor: %2$s \nPickup date: %3$s \n
         Total: %4$s \n\n Thank you!</string>
 </resources>
